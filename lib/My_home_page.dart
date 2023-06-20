@@ -34,17 +34,18 @@ class MyHomePage extends StatelessWidget {
                   'accessToken': mapboxAccessToken,
                 },
               ),
+              MarkerLayer(
+                markers: [
+                  Marker(
+                    point: const LatLng(28.5355, 77.3910),
+                    builder: (context) => const Icon(
+                      Icons.location_on_outlined,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ],
-            // layers: [
-            //   TileLayerOptions(
-            //     urlTemplate:
-            //         "https://api.mapbox.com/styles/v1/dhruv25/{mapStyleId}/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}",
-            //     additionalOptions: {
-            //       'mapStyleId': AppConstants.mapBoxStyleId,
-            //       'accessToken': AppConstants.mapBoxAccessToken,
-            //     },
-            //   ),
-            // ],
           ),
         ],
       ),
